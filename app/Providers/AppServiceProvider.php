@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Labeler\ArtisanLabeler;
 use Illuminate\Support\ServiceProvider;
+use Revolution\Bluesky\Labeler\Labeler;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +21,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        Labeler::register(ArtisanLabeler::class);
     }
 }
