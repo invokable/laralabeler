@@ -12,7 +12,9 @@
         "php": "^8.2",
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9",
-        "revolution/laravel-bluesky": "dev-labeler"
+        "revolt/event-loop": "^1.0",
+        "revolution/laravel-bluesky": "dev-labeler",
+        "workerman/workerman": "^5.0-rc.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -22,7 +24,7 @@
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.1",
         "phpunit/phpunit": "^11.0.1",
-        "revolution/laravel-vercel-installer": "^1.2"
+        "barryvdh/laravel-ide-helper": "^3.0"
     },
     "autoload": {
         "psr-4": {
@@ -42,7 +44,10 @@
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta",
+            "@php artisan ide-helper:models -N"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
