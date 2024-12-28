@@ -6,6 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Revolution\Bluesky\Facades\Bluesky;
+use Revolution\Bluesky\Labeler\Labeler;
 use Revolution\Bluesky\Types\RepoRef;
 
 class LabelFollowerCommand extends Command
@@ -52,7 +53,7 @@ class LabelFollowerCommand extends Command
                         labels: ['artisan'],
                     );
 
-                    info(self::class, $res->json());
+                    Labeler::log(self::class, $res->json());
                 });
 
             $cursor = $res->json('cursor');
