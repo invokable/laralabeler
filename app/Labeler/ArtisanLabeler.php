@@ -129,7 +129,8 @@ readonly class ArtisanLabeler extends AbstractLabeler
         }
 
         foreach ($negateLabelVals as $val) {
-            info('negateLabelVals', Arr::wrap($val));
+            Labeler::log('negateLabelVals', Arr::wrap($val));
+
             yield $this->createUnsignedLabel($uri, $cid, $val, true);
         }
     }
