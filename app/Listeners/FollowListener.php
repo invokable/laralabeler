@@ -2,7 +2,8 @@
 
 namespace App\Listeners;
 
-use Revolution\Bluesky\Events\Labeler\NotificationReceived;
+use Revolution\AtProto\Lexicon\Enum\Graph;
+use Revolution\Bluesky\Events\Jetstream\JetstreamCommitMessage;
 use Revolution\Bluesky\Facades\Bluesky;
 use Revolution\Bluesky\Types\RepoRef;
 
@@ -19,27 +20,22 @@ class FollowListener
     /**
      * Handle the event.
      */
-    public function handle(NotificationReceived $event): void
+    public function handle(JetstreamCommitMessage $event): void
     {
-        $reason = $event->reason;
-        $notification = $event->notification;
-        $did = data_get($notification, 'author.did');
+        $operation = $event->operation;
+        $message = $event->message;
+        $did = data_get($message, 'did');
+        $collection = data_get($message, 'commit.collection');
+        $subject = data_get($message, 'commit.record.subject');
 
-//        $profile = Bluesky::getRecord(
-//            repo: $did,
-//            collection: 'app.bsky.actor.profile',
-//            rkey: 'self',
-//        );
-
-        if ($reason === 'follow' && ! empty($did)) {
+        if ($operation === 'create' && $collection === Graph::Follow && $subject === config('bluesky.labeler.did')) {
             $res = Bluesky::login(config('bluesky.labeler.identifier'), config('bluesky.labeler.password'))
                 ->createLabels(
                     subject: RepoRef::to($did),
                     labels: ['artisan'],
                 );
 
-            info('follow', $notification);
-            info($res->body());
+            info('follow', $message);
         }
     }
 }
