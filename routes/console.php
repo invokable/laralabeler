@@ -27,9 +27,33 @@ Artisan::command('bsky:label', function () {
     $this->comment($profile->body());
 });
 
-Artisan::command('bsky:label-record', function () {
+Artisan::command('bsky:label-profile', function () {
+    $did = Bluesky::resolveHandle(config('bluesky.identifier'))['did'];
 
-    $post = Bluesky::getPost('');
+    $profile = Bluesky::getRecord(
+        repo: $did,
+        collection: 'app.bsky.actor.profile',
+        rkey: 'self',
+    );
+
+    $res = Bluesky::login(config('bluesky.labeler.identifier'), config('bluesky.labeler.password'))
+        ->createLabels(
+            subject: StrongRef::to(uri: $profile->json('uri'), cid: $profile->json('cid')),
+            labels: ['artisan'],
+        );
+
+    $profile = Bluesky::client(auth: true)
+        ->withHeader('atproto-accept-labelers', config('bluesky.labeler.did'))
+        ->getProfile(
+            actor: $did,
+        );
+
+    $this->comment($res->body());
+    $this->comment($profile->body());
+});
+
+Artisan::command('bsky:label-record {at-uri}', function () {
+    $post = Bluesky::getPost($this->argument('at-uri'));
 
     $res = Bluesky::login(config('bluesky.labeler.identifier'), config('bluesky.labeler.password'))
         ->createLabels(
@@ -41,7 +65,6 @@ Artisan::command('bsky:label-record', function () {
 });
 
 Artisan::command('bsky:label-delete', function () {
-
     $did = Bluesky::resolveHandle(config('bluesky.identifier'))['did'];
 
     $res = Bluesky::login(config('bluesky.labeler.identifier'), config('bluesky.labeler.password'))
@@ -53,9 +76,8 @@ Artisan::command('bsky:label-delete', function () {
     $this->comment($res->body());
 });
 
-Artisan::command('bsky:label-record-delete', function () {
-
-    $post = Bluesky::getPost('');
+Artisan::command('bsky:label-record-delete {at-uri}', function () {
+    $post = Bluesky::getPost($this->argument('at-uri'));
 
     $res = Bluesky::login(config('bluesky.labeler.identifier'), config('bluesky.labeler.password'))
         ->deleteLabels(
