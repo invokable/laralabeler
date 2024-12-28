@@ -72,10 +72,10 @@ readonly class ArtisanLabeler extends AbstractLabeler
             //info('subscribeLabels arr', $arr);
 
             if ($this->verify($arr) === false) {
-                info('subscribeLabels: verify failed', $arr);
+                Labeler::log('subscribeLabels: verify failed', $arr);
                 continue;
-                //} else {
-                //info('subscribeLabels: verify success', $arr);
+            } else {
+                Labeler::log('subscribeLabels: verify success', $arr);
             }
 
             yield new SubscribeLabelResponse(
@@ -93,7 +93,6 @@ readonly class ArtisanLabeler extends AbstractLabeler
         $sig = Signature::fromCompact($sig);
 
         $unsigned = Arr::except($signed, 'sig');
-        //info('unsigned', $unsigned);
 
         $cbor = CBOR::encode($unsigned);
 
@@ -165,8 +164,8 @@ readonly class ArtisanLabeler extends AbstractLabeler
      */
     public function createReport(Request $request): array
     {
-        info('createReport', $request->all());
-        info('createReport header', $request->header());
+        Labeler::log('createReport', $request->all());
+        Labeler::log('createReport header', $request->header());
 
         $reasonType = $request->input('reasonType');
         if ($reasonType !== 'com.atproto.moderation.defs#reasonAppeal') {
@@ -214,8 +213,8 @@ readonly class ArtisanLabeler extends AbstractLabeler
      */
     public function queryLabels(Request $request): array
     {
-        info('queryLabels', $request->all());
-        info('queryLabels header', $request->header());
+        Labeler::log('queryLabels', $request->all());
+        Labeler::log('queryLabels header', $request->header());
 
         $uriPatterns = Arr::wrap($request->input('uriPatterns', '*'));
         $limit = max(min($request->input('limit', 10), 250), 1);
