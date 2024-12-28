@@ -3906,12 +3906,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-bluesky.git",
-                "reference": "cf0e67772eceb909d29738ee73ffa208cd87f4b0"
+                "reference": "db3eeb5f62daec23239124d3922f53f6c41f7bea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-bluesky/zipball/cf0e67772eceb909d29738ee73ffa208cd87f4b0",
-                "reference": "cf0e67772eceb909d29738ee73ffa208cd87f4b0",
+                "url": "https://api.github.com/repos/kawax/laravel-bluesky/zipball/db3eeb5f62daec23239124d3922f53f6c41f7bea",
+                "reference": "db3eeb5f62daec23239124d3922f53f6c41f7bea",
                 "shasum": ""
             },
             "require": {
@@ -3972,7 +3972,7 @@
                 "issues": "https://github.com/kawax/laravel-bluesky/issues",
                 "source": "https://github.com/kawax/laravel-bluesky/tree/main"
             },
-            "time": "2024-12-28T01:49:38+00:00"
+            "time": "2024-12-28T07:11:52+00:00"
         },
         {
             "name": "symfony/clock",
