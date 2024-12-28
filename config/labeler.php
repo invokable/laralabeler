@@ -9,7 +9,7 @@ This Labeler just displays an "artisan" badge on your account (profile page & al
 ## Add badge
 - **Subscribe** to this account as a Labeler.
 - **Follow** this account.
-- Wait about an hour.
+- The label should appear immediately, if not wait about an hour.
 - Check that the badge has been displayed.
 
 ## Remove badge
