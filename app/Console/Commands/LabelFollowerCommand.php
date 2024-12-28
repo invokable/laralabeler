@@ -52,7 +52,7 @@ class LabelFollowerCommand extends Command
                         labels: ['artisan'],
                     );
 
-                    info($res->body());
+                    info(self::class, $res->json());
                 });
 
             $cursor = $res->json('cursor');
