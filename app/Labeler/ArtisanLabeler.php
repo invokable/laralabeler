@@ -231,7 +231,9 @@ class ArtisanLabeler extends AbstractLabeler
 
         return [
             'cursor' => (string) $labels->isNotEmpty() ? $labels->first()->id : '',
-            'labels' => collect($labels->toArray())->map(fn ($label) => Labeler::formatLabel($label))->toArray(),
+            'labels' => collect($labels->toArray())
+                ->map(fn ($label) => Labeler::formatLabel($label))
+                ->toArray(),
         ];
     }
 }
