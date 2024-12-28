@@ -5,6 +5,7 @@ namespace App\Listeners;
 use Revolution\AtProto\Lexicon\Enum\Graph;
 use Revolution\Bluesky\Events\Jetstream\JetstreamCommitMessage;
 use Revolution\Bluesky\Facades\Bluesky;
+use Revolution\Bluesky\Labeler\Labeler;
 use Revolution\Bluesky\Types\RepoRef;
 
 class FollowListener
@@ -29,7 +30,7 @@ class FollowListener
         $subject = data_get($message, 'commit.record.subject');
 
         if ($operation === 'create' && $collection === Graph::Follow->value && $subject === config('bluesky.labeler.did')) {
-            info(self::class, $message);
+            Labeler::log(self::class, $message);
 
             $res = Bluesky::login(config('bluesky.labeler.identifier'), config('bluesky.labeler.password'))
                 ->createLabels(
