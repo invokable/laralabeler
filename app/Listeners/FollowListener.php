@@ -29,13 +29,13 @@ class FollowListener
         $subject = data_get($message, 'commit.record.subject');
 
         if ($operation === 'create' && $collection === Graph::Follow->value && $subject === config('bluesky.labeler.did')) {
+            info(self::class, $message);
+
             $res = Bluesky::login(config('bluesky.labeler.identifier'), config('bluesky.labeler.password'))
                 ->createLabels(
                     subject: RepoRef::to($did),
                     labels: ['artisan'],
                 );
-
-            info(self::class, $message);
         }
     }
 }
