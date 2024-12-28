@@ -74,7 +74,7 @@ class ArtisanLabeler extends AbstractLabeler
             if ($this->verify($arr) === false) {
                 info('subscribeLabels: verify failed', $arr);
                 continue;
-            //} else {
+                //} else {
                 //info('subscribeLabels: verify success', $arr);
             }
 
@@ -215,6 +215,7 @@ class ArtisanLabeler extends AbstractLabeler
     public function queryLabels(Request $request): array
     {
         info('queryLabels', $request->all());
+        info('queryLabels header', $request->header());
 
         $uriPatterns = Arr::wrap($request->input('uriPatterns', '*'));
         $limit = max(min($request->input('limit', 10), 250), 1);
@@ -230,7 +231,7 @@ class ArtisanLabeler extends AbstractLabeler
 
         return [
             'cursor' => (string) $labels->isNotEmpty() ? $labels->first()->id : '',
-            'labels' => $labels->toArray(),
+            'labels' => collect($labels->toArray())->map(fn ($label) => Labeler::formatLabel($label))->toArray(),
         ];
     }
 }
