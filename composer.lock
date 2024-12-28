@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "721463469ca070a737905da8a468678f",
+    "content-hash": "9003b70af6e4285af9f1201e555de2c4",
     "packages": [
         {
             "name": "brick/math",
@@ -2364,16 +2364,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "3.8.3",
+            "version": "3.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "f01cfa96468f4c38325f507ab81a4f1d2cd93cfe"
+                "reference": "129700ed449b1f02d70272d2ac802357c8c30c58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/f01cfa96468f4c38325f507ab81a4f1d2cd93cfe",
-                "reference": "f01cfa96468f4c38325f507ab81a4f1d2cd93cfe",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/129700ed449b1f02d70272d2ac802357c8c30c58",
+                "reference": "129700ed449b1f02d70272d2ac802357c8c30c58",
                 "shasum": ""
             },
             "require": {
@@ -2466,7 +2466,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-12-21T18:03:19+00:00"
+            "time": "2024-12-27T09:25:35+00:00"
         },
         {
             "name": "nette/schema",
@@ -3902,16 +3902,16 @@
         },
         {
             "name": "revolution/laravel-bluesky",
-            "version": "dev-labeler",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-bluesky.git",
-                "reference": "6d6750a98410006d9b8a20e212318bce7464319e"
+                "reference": "cf0e67772eceb909d29738ee73ffa208cd87f4b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-bluesky/zipball/6d6750a98410006d9b8a20e212318bce7464319e",
-                "reference": "6d6750a98410006d9b8a20e212318bce7464319e",
+                "url": "https://api.github.com/repos/kawax/laravel-bluesky/zipball/cf0e67772eceb909d29738ee73ffa208cd87f4b0",
+                "reference": "cf0e67772eceb909d29738ee73ffa208cd87f4b0",
                 "shasum": ""
             },
             "require": {
@@ -3922,23 +3922,21 @@
                 "laravel/socialite": "^5.16",
                 "php": "^8.2",
                 "phpseclib/phpseclib": "^3.0",
+                "revolt/event-loop": "^1.0",
                 "revolution/atproto-lexicon-contracts": "1.0.39",
-                "valtzu/guzzle-websocket-middleware": "^0.2.0",
+                "workerman/workerman": "^5.0-rc.3",
                 "yocto/yoclib-multibase": "^1.2"
             },
             "require-dev": {
                 "larastan/larastan": "^3.0",
                 "orchestra/testbench": "^9.0",
-                "phpstan/extension-installer": "^1.4",
-                "revolt/event-loop": "^1.0",
-                "workerman/workerman": "^5.0-rc.3"
+                "phpstan/extension-installer": "^1.4"
             },
             "suggest": {
                 "ext-gmp": "*",
-                "ext-pcntl": "*",
-                "revolt/event-loop": "*",
-                "workerman/workerman": "*"
+                "ext-pcntl": "*"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -3972,9 +3970,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kawax/laravel-bluesky/issues",
-                "source": "https://github.com/kawax/laravel-bluesky/tree/labeler"
+                "source": "https://github.com/kawax/laravel-bluesky/tree/main"
             },
-            "time": "2024-12-27T06:07:37+00:00"
+            "time": "2024-12-28T01:49:38+00:00"
         },
         {
             "name": "symfony/clock",
@@ -4227,12 +4225,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -4450,12 +4448,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -5728,12 +5726,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -5988,12 +5986,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -6258,42 +6256,6 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/v2.3.0"
             },
             "time": "2024-12-21T16:25:41+00:00"
-        },
-        {
-            "name": "valtzu/guzzle-websocket-middleware",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/valtzu/guzzle-websocket-middleware.git",
-                "reference": "4ac84c667aa4d4df2e9b82269a4691c686a20716"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/valtzu/guzzle-websocket-middleware/zipball/4ac84c667aa4d4df2e9b82269a4691c686a20716",
-                "reference": "4ac84c667aa4d4df2e9b82269a4691c686a20716",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^7.7"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^10.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Valtzu\\WebSocketMiddleware\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "support": {
-                "issues": "https://github.com/valtzu/guzzle-websocket-middleware/issues",
-                "source": "https://github.com/valtzu/guzzle-websocket-middleware/tree/0.2.0"
-            },
-            "time": "2024-09-18T18:22:42+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

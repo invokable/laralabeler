@@ -12,9 +12,9 @@
         "php": "^8.2",
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9",
+        "workerman/workerman": "^5.0.0-rc.3",
         "revolt/event-loop": "^1.0",
-        "revolution/laravel-bluesky": "dev-labeler",
-        "workerman/workerman": "^5.0-rc.3"
+        "revolution/laravel-bluesky": "dev-main"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
