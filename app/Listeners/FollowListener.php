@@ -28,7 +28,7 @@ class FollowListener
         $collection = data_get($message, 'commit.collection');
         $subject = data_get($message, 'commit.record.subject');
 
-        if ($operation === 'create' && $collection === Graph::Follow && $subject === config('bluesky.labeler.did')) {
+        if ($operation === 'create' && $collection === Graph::Follow->value && $subject === config('bluesky.labeler.did')) {
             $res = Bluesky::login(config('bluesky.labeler.identifier'), config('bluesky.labeler.password'))
                 ->createLabels(
                     subject: RepoRef::to($did),
