@@ -183,7 +183,7 @@ readonly class ArtisanLabeler extends AbstractLabeler
         if (data_get($subject, '$type') === 'com.atproto.admin.defs#repoRef') {
             $did = data_get($subject, 'did');
             $delete = RepoRef::to($did);
-        } elseif (data_get($subject, '$type') === 'com.atproto.admin.defs#repoRef') {
+        } elseif (data_get($subject, '$type') === 'com.atproto.repo.strongRef') {
             $uri = data_get($subject, 'uri');
             $cid = data_get($subject, 'cid');
             $delete = StrongRef::to($uri, $cid);
