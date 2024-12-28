@@ -26,7 +26,7 @@ use Revolution\Bluesky\Support\DidDocument;
 use Revolution\Bluesky\Types\RepoRef;
 use Revolution\Bluesky\Types\StrongRef;
 
-class ArtisanLabeler extends AbstractLabeler
+readonly class ArtisanLabeler extends AbstractLabeler
 {
     /**
      * Label definitions.
