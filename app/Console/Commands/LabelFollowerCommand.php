@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
 use Revolution\Bluesky\Facades\Bluesky;
 use Revolution\Bluesky\Types\RepoRef;
 
@@ -41,15 +42,17 @@ class LabelFollowerCommand extends Command
                 );
 
             $res->collect('followers')
-                ->reject(function ($follower) {
-                    return Arr::has($follower, ['labels.0.val']);
+                ->filter(function ($follower) {
+                    return empty(Arr::first($follower['labels'], function ($label) {
+                        return Str::startsWith($label['uri'], 'did:') && $label['val'] === 'artisan' && $label['src'] === config('bluesky.labeler.did');
+                    }));
                 })->each(function ($follower) {
                     $res = Bluesky::createLabels(
                         subject: RepoRef::to(data_get($follower, 'did')),
                         labels: ['artisan'],
                     );
 
-                    $this->line($res->body());
+                    info($res->body());
                 });
 
             $cursor = $res->json('cursor');
