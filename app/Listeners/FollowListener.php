@@ -35,7 +35,7 @@ class FollowListener
                     labels: ['artisan'],
                 );
 
-            info('follow', $message);
+            info(self::class, $message);
         }
     }
 }
