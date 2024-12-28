@@ -25,8 +25,6 @@ class Label extends Model
      */
     protected $hidden = ['id', 'created_at', 'updated_at'];
 
-    //protected $dateFormat = 'Y-m-d H:i:s.u';
-
     /**
      * Get the attributes that should be cast.
      *
