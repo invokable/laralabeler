@@ -3853,16 +3853,16 @@
         },
         {
             "name": "revolution/atproto-lexicon-contracts",
-            "version": "1.0.39",
+            "version": "1.0.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/atproto-lexicon-contracts.git",
-                "reference": "bc8a968fe54199b18dd134043fcfbb3bda1026e6"
+                "reference": "adf79a37316cbb986a40c49df0f3a347e0d78c75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/atproto-lexicon-contracts/zipball/bc8a968fe54199b18dd134043fcfbb3bda1026e6",
-                "reference": "bc8a968fe54199b18dd134043fcfbb3bda1026e6",
+                "url": "https://api.github.com/repos/kawax/atproto-lexicon-contracts/zipball/adf79a37316cbb986a40c49df0f3a347e0d78c75",
+                "reference": "adf79a37316cbb986a40c49df0f3a347e0d78c75",
                 "shasum": ""
             },
             "require": {
@@ -3896,9 +3896,9 @@
                 "contracts"
             ],
             "support": {
-                "source": "https://github.com/kawax/atproto-lexicon-contracts/tree/1.0.39"
+                "source": "https://github.com/kawax/atproto-lexicon-contracts/tree/1.0.40"
             },
-            "time": "2024-12-19T04:08:51+00:00"
+            "time": "2024-12-28T03:37:37+00:00"
         },
         {
             "name": "revolution/laravel-bluesky",
@@ -3906,12 +3906,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-bluesky.git",
-                "reference": "7dc47ece86ac8f8b65898d7aaf7d31a887551bf9"
+                "reference": "f72b1736ddae60a037d404c8600362735e036501"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-bluesky/zipball/7dc47ece86ac8f8b65898d7aaf7d31a887551bf9",
-                "reference": "7dc47ece86ac8f8b65898d7aaf7d31a887551bf9",
+                "url": "https://api.github.com/repos/kawax/laravel-bluesky/zipball/f72b1736ddae60a037d404c8600362735e036501",
+                "reference": "f72b1736ddae60a037d404c8600362735e036501",
                 "shasum": ""
             },
             "require": {
@@ -3922,7 +3922,7 @@
                 "laravel/socialite": "^5.16",
                 "php": "^8.2",
                 "phpseclib/phpseclib": "^3.0",
-                "revolution/atproto-lexicon-contracts": "1.0.39",
+                "revolution/atproto-lexicon-contracts": "1.0.40",
                 "yocto/yoclib-multibase": "^1.2"
             },
             "require-dev": {
@@ -3935,8 +3935,8 @@
             "suggest": {
                 "ext-gmp": "*",
                 "ext-pcntl": "*",
-                "revolt/event-loop": "",
-                "workerman/workerman": ""
+                "revolt/event-loop": "Required to use WebSocket.",
+                "workerman/workerman": "Required to use WebSocket.(^4.2|^5.0)"
             },
             "default-branch": true,
             "type": "library",
@@ -3976,7 +3976,7 @@
                 "issues": "https://github.com/kawax/laravel-bluesky/issues",
                 "source": "https://github.com/kawax/laravel-bluesky/tree/main"
             },
-            "time": "2024-12-29T02:19:00+00:00"
+            "time": "2024-12-29T08:15:28+00:00"
         },
         {
             "name": "symfony/clock",
