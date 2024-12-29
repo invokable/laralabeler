@@ -30,7 +30,6 @@ class FollowListener
         $collection = data_get($message, 'commit.collection');
         $subject = data_get($message, 'commit.record.subject');
 
-
         if ($operation === 'create' && $collection === Graph::Follow->value && $subject === config('bluesky.labeler.did')) {
             Labeler::log(self::class, $message);
 
