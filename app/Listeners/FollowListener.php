@@ -2,6 +2,7 @@
 
 namespace App\Listeners;
 
+use Illuminate\Support\Arr;
 use Revolution\AtProto\Lexicon\Enum\Graph;
 use Revolution\Bluesky\Events\Jetstream\JetstreamCommitMessage;
 use Revolution\Bluesky\Facades\Bluesky;
@@ -36,7 +37,7 @@ class FollowListener
             $labeler_session = cache('labeler_session');
             Labeler::log('labeler_session cache', $labeler_session);
 
-            if (empty($labeler_session)) {
+            if (empty($labeler_session) || Arr::has($labeler_session, 'error')) {
                 Bluesky::login(config('bluesky.labeler.identifier'), config('bluesky.labeler.password'));
                 $labeler_session = Bluesky::agent()->session()->toArray();
                 Labeler::log('labeler_session login', $labeler_session);
