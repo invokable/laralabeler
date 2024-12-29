@@ -47,7 +47,7 @@ class FollowListener
 
             Bluesky::withToken(LegacySession::create($labeler_session));
 
-            if (! Bluesky::check()) {
+            if (Bluesky::check()) {
                 Bluesky::refreshSession();
 
                 $labeler_session = Bluesky::agent()->session()->toArray();
