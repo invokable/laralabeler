@@ -3906,12 +3906,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-bluesky.git",
-                "reference": "ba51e806e4b67651147538d4ed352545c61b3df2"
+                "reference": "d3ad330969dc57beaa623f83c69942f5063960b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-bluesky/zipball/ba51e806e4b67651147538d4ed352545c61b3df2",
-                "reference": "ba51e806e4b67651147538d4ed352545c61b3df2",
+                "url": "https://api.github.com/repos/kawax/laravel-bluesky/zipball/d3ad330969dc57beaa623f83c69942f5063960b2",
+                "reference": "d3ad330969dc57beaa623f83c69942f5063960b2",
                 "shasum": ""
             },
             "require": {
@@ -3922,19 +3922,21 @@
                 "laravel/socialite": "^5.16",
                 "php": "^8.2",
                 "phpseclib/phpseclib": "^3.0",
-                "revolt/event-loop": "^1.0",
                 "revolution/atproto-lexicon-contracts": "1.0.39",
-                "workerman/workerman": "^5.0-rc.3",
                 "yocto/yoclib-multibase": "^1.2"
             },
             "require-dev": {
                 "larastan/larastan": "^3.0",
                 "orchestra/testbench": "^9.0",
-                "phpstan/extension-installer": "^1.4"
+                "phpstan/extension-installer": "^1.4",
+                "revolt/event-loop": "^1.0",
+                "workerman/workerman": "^5.0-rc.3"
             },
             "suggest": {
                 "ext-gmp": "*",
-                "ext-pcntl": "*"
+                "ext-pcntl": "*",
+                "revolt/event-loop": "",
+                "workerman/workerman": ""
             },
             "default-branch": true,
             "type": "library",
@@ -3964,6 +3966,8 @@
             "keywords": [
                 "atproto",
                 "bluesky",
+                "feed-generator",
+                "labeler",
                 "laravel",
                 "notifications",
                 "socialite"
@@ -3972,7 +3976,7 @@
                 "issues": "https://github.com/kawax/laravel-bluesky/issues",
                 "source": "https://github.com/kawax/laravel-bluesky/tree/main"
             },
-            "time": "2024-12-28T14:38:16+00:00"
+            "time": "2024-12-29T01:10:13+00:00"
         },
         {
             "name": "symfony/clock",
