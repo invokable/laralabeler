@@ -218,7 +218,7 @@ readonly class ArtisanLabeler extends AbstractLabeler
         Labeler::log('queryLabels header', $request->header());
 
         $uriPatterns = Arr::wrap($request->input('uriPatterns', '*'));
-        $limit = max(min($request->input('limit', 10), 250), 1);
+        $limit = max(min($request->input('limit', 1), 250), 1);
 
         $labels = Label::latest()->limit($limit)
 //            ->unless($uriPatterns === ['*'], function (Builder $query) use ($uriPatterns) {
