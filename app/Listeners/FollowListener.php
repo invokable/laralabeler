@@ -41,13 +41,18 @@ class FollowListener
                 $labeler_session = Bluesky::agent()->session()->toArray();
                 Labeler::log('labeler_session login', $labeler_session);
 
-                cache()->forever('labeler_session', $labeler_session);
+                cache()->put('labeler_session', $labeler_session, now()->addHours(12));
             }
 
             Bluesky::withToken(LegacySession::create($labeler_session));
 
             if (! Bluesky::check()) {
                 Bluesky::refreshSession();
+
+                $labeler_session = Bluesky::agent()->session()->toArray();
+                Labeler::log('labeler_session refresh', $labeler_session);
+
+                cache()->put('labeler_session', $labeler_session, now()->addHours(12));
             }
 
             $res = Bluesky::createLabels(
