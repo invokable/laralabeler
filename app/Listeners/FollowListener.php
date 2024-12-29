@@ -34,6 +34,8 @@ class FollowListener
             Labeler::log(self::class, $message);
 
             $labeler_session = cache('labeler_session');
+            Labeler::log('labeler_session', $labeler_session);
+
             if (empty($labeler_session)) {
                 Bluesky::login(config('bluesky.labeler.identifier'), config('bluesky.labeler.password'));
                 $labeler_session = Bluesky::agent()->session()->toArray();
