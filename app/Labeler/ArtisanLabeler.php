@@ -116,10 +116,17 @@ readonly class ArtisanLabeler extends AbstractLabeler
     /**
      * @return iterable<UnsignedLabel>
      *
+     * @throws LabelerException
+     *
      * @link https://docs.bsky.app/docs/api/tools-ozone-moderation-emit-event
      */
     public function emitEvent(Request $request, ?string $did, ?string $token): iterable
     {
+        $type = data_get($request->input('event'), '$type');
+        if ($type !== 'tools.ozone.moderation.defs#modEventLabel') {
+            throw new LabelerException('InvalidRequest', 'Unsupported event type');
+        }
+
         $subject = $request->input('subject');
         $uri = data_get($subject, 'uri', data_get($subject, 'did'));
         $cid = data_get($subject, 'cid');
