@@ -13,7 +13,7 @@ This Labeler just displays an "artisan" badge on your account (profile page & al
 - **Subscribe** to this account ([@laralabeler.bsky.social](https://bsky.app/profile/laralabeler.bsky.social)) as a Labeler.
 - **Follow** this account.
 - The badge should appear immediately, if not wait about an hour.
-- Check that the badge has been displayed.
+- Make sure the badge appears on your posts. You can only see the "Appeal" description on your profile.
 
 ## Remove badge
 - **Unfollow** this account ([@laralabeler.bsky.social](https://bsky.app/profile/laralabeler.bsky.social)).
