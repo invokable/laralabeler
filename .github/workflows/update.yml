@@ -1,0 +1,15 @@
+name: composer update
+
+on:
+  schedule:
+    - cron: '0 6 * * 4' #UTC
+
+jobs:
+  composer:
+    uses: kawax/composer-workflow/.github/workflows/update.yml@v1
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
+    with:
+      php: 8.4
+      git-name: kawax
+      git-email: 1502086+kawax@users.noreply.github.com
