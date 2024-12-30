@@ -25,3 +25,7 @@ BLUESKY_LABELER_PRIVATE_KEY=
 ```shell
 php artisan bluesky:labeler:setup
 ```
+
+
+## LICENCE
+MIT
