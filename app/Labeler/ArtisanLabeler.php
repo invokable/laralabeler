@@ -17,6 +17,7 @@ use Revolution\Bluesky\Facades\Bluesky;
 use Revolution\Bluesky\Labeler\AbstractLabeler;
 use Revolution\Bluesky\Labeler\LabelDefinition;
 use Revolution\Bluesky\Labeler\Labeler;
+use Revolution\Bluesky\Labeler\LabelerException;
 use Revolution\Bluesky\Labeler\LabelLocale;
 use Revolution\Bluesky\Labeler\SavedLabel;
 use Revolution\Bluesky\Labeler\SignedLabel;
@@ -55,14 +56,16 @@ readonly class ArtisanLabeler extends AbstractLabeler
     /**
      * @return iterable<SubscribeLabelResponse>
      *
-     * @throw LabelerException
+     * @throws LabelerException
      */
     public function subscribeLabels(?int $cursor): iterable
     {
-        //info('subscribeLabels', ['cursor' => $cursor]);
-
         if (is_null($cursor)) {
             return null;
+        }
+
+        if ($cursor > Label::max('id')) {
+            throw new LabelerException('FutureCursor', 'Cursor is in the future');
         }
 
         foreach (Label::where('id', '>', $cursor)->lazy() as $label) {
