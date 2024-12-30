@@ -72,8 +72,6 @@ readonly class ArtisanLabeler extends AbstractLabeler
             $arr = $label->toArray();
             $arr = Labeler::formatLabel($arr);
 
-            //info('subscribeLabels arr', $arr);
-
             if ($this->verify($arr) === false) {
                 Labeler::log('subscribeLabels: verify failed', $arr);
                 continue;
@@ -227,17 +225,10 @@ readonly class ArtisanLabeler extends AbstractLabeler
         Labeler::log('queryLabels', $request->all());
         Labeler::log('queryLabels header', $request->header());
 
-        $uriPatterns = Arr::wrap($request->input('uriPatterns', '*'));
+        //$uriPatterns = Arr::wrap($request->input('uriPatterns', '*'));
         $limit = max(min($request->input('limit', 1), 250), 1);
 
-        $labels = Label::latest()->limit($limit)
-//            ->unless($uriPatterns === ['*'], function (Builder $query) use ($uriPatterns) {
-//                foreach ($uriPatterns as $pattern) {
-//                    $query->orWhereLike('uri', Str::remove('*', $pattern).'%');
-//                }
-//            }
-//            )
-            ->get();
+        $labels = Label::latest()->limit($limit)->get();
 
         return [
             'cursor' => (string) $labels->isNotEmpty() ? $labels->first()->id : '',
