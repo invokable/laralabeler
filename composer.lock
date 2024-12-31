@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9003b70af6e4285af9f1201e555de2c4",
+    "content-hash": "4faf3bf721b915a8dd9bd6dad05b4b3f",
     "packages": [
         {
             "name": "brick/math",
@@ -3906,12 +3906,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-bluesky.git",
-                "reference": "0a12a2b9c318112e343e851f328605b2576bdc30"
+                "reference": "dbb30261203c10f901582c5d7598be09072ea0c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-bluesky/zipball/0a12a2b9c318112e343e851f328605b2576bdc30",
-                "reference": "0a12a2b9c318112e343e851f328605b2576bdc30",
+                "url": "https://api.github.com/repos/kawax/laravel-bluesky/zipball/dbb30261203c10f901582c5d7598be09072ea0c5",
+                "reference": "dbb30261203c10f901582c5d7598be09072ea0c5",
                 "shasum": ""
             },
             "require": {
@@ -3976,7 +3976,7 @@
                 "issues": "https://github.com/kawax/laravel-bluesky/issues",
                 "source": "https://github.com/kawax/laravel-bluesky/tree/main"
             },
-            "time": "2024-12-30T01:23:34+00:00"
+            "time": "2024-12-31T03:46:04+00:00"
         },
         {
             "name": "symfony/clock",
