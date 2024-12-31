@@ -8,6 +8,7 @@ use App\Models\Label;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Number;
 use phpseclib3\Crypt\EC;
 use Revolution\Bluesky\Core\CBOR;
 use Revolution\Bluesky\Crypto\DidKey;
@@ -226,7 +227,7 @@ readonly class ArtisanLabeler extends AbstractLabeler
         Labeler::log('queryLabels header', $request->header());
 
         //$uriPatterns = Arr::wrap($request->input('uriPatterns', '*'));
-        $limit = max(min($request->input('limit', 1), 250), 1);
+        $limit = Number::clamp($request->input('limit', 1), min: 1, max: 50);
 
         $labels = Label::latest()->limit($limit)->get();
 
