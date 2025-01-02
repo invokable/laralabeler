@@ -14,7 +14,7 @@
         "laravel/tinker": "^2.9",
         "revolt/event-loop": "^1.0",
         "revolution/laravel-bluesky": "dev-main",
-        "workerman/workerman": "^5.0.0-rc.3"
+        "workerman/workerman": "^5.0.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
