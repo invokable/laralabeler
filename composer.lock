@@ -3906,12 +3906,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-bluesky.git",
-                "reference": "74ec17f1be1cb3168dce0f966bc7fac3fcca3f51"
+                "reference": "415050da0d28e7d1e14b7e4f0d9c6f372d126354"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-bluesky/zipball/74ec17f1be1cb3168dce0f966bc7fac3fcca3f51",
-                "reference": "74ec17f1be1cb3168dce0f966bc7fac3fcca3f51",
+                "url": "https://api.github.com/repos/kawax/laravel-bluesky/zipball/415050da0d28e7d1e14b7e4f0d9c6f372d126354",
+                "reference": "415050da0d28e7d1e14b7e4f0d9c6f372d126354",
                 "shasum": ""
             },
             "require": {
@@ -3930,13 +3930,13 @@
                 "orchestra/testbench": "^9.0",
                 "phpstan/extension-installer": "^1.4",
                 "revolt/event-loop": "^1.0",
-                "workerman/workerman": "^5.0-rc.3"
+                "workerman/workerman": "^5.0"
             },
             "suggest": {
                 "ext-gmp": "*",
                 "ext-pcntl": "*",
                 "revolt/event-loop": "Required to use WebSocket.",
-                "workerman/workerman": "Required to use WebSocket.(^4.2|^5.0)"
+                "workerman/workerman": "Required to use WebSocket."
             },
             "default-branch": true,
             "type": "library",
@@ -3976,7 +3976,7 @@
                 "issues": "https://github.com/kawax/laravel-bluesky/issues",
                 "source": "https://github.com/kawax/laravel-bluesky/tree/main"
             },
-            "time": "2025-01-02T01:44:40+00:00"
+            "time": "2025-01-02T01:50:55+00:00"
         },
         {
             "name": "symfony/clock",
