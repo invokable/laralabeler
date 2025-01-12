@@ -8,6 +8,8 @@ on:
 jobs:
   composer:
     uses: kawax/composer-workflow/.github/workflows/update.yml@v1
+    secrets:
+      token: ${{ github.token }}
     with:
       php: 8.4
       git-name: kawax
