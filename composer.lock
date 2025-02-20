@@ -1161,16 +1161,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v11.42.1",
+            "version": "v11.43.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "ff392f42f6c55cc774ce75553a11c6b031da67f8"
+                "reference": "99d1573698abc42222f04d25fcd5b213d0eedf21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/ff392f42f6c55cc774ce75553a11c6b031da67f8",
-                "reference": "ff392f42f6c55cc774ce75553a11c6b031da67f8",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/99d1573698abc42222f04d25fcd5b213d0eedf21",
+                "reference": "99d1573698abc42222f04d25fcd5b213d0eedf21",
                 "shasum": ""
             },
             "require": {
@@ -1372,7 +1372,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-02-12T20:58:18+00:00"
+            "time": "2025-02-19T21:53:48+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -3781,16 +3781,16 @@
         },
         {
             "name": "revolt/event-loop",
-            "version": "v1.0.6",
+            "version": "v1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/revoltphp/event-loop.git",
-                "reference": "25de49af7223ba039f64da4ae9a28ec2d10d0254"
+                "reference": "09bf1bf7f7f574453efe43044b06fafe12216eb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/revoltphp/event-loop/zipball/25de49af7223ba039f64da4ae9a28ec2d10d0254",
-                "reference": "25de49af7223ba039f64da4ae9a28ec2d10d0254",
+                "url": "https://api.github.com/repos/revoltphp/event-loop/zipball/09bf1bf7f7f574453efe43044b06fafe12216eb3",
+                "reference": "09bf1bf7f7f574453efe43044b06fafe12216eb3",
                 "shasum": ""
             },
             "require": {
@@ -3847,9 +3847,9 @@
             ],
             "support": {
                 "issues": "https://github.com/revoltphp/event-loop/issues",
-                "source": "https://github.com/revoltphp/event-loop/tree/v1.0.6"
+                "source": "https://github.com/revoltphp/event-loop/tree/v1.0.7"
             },
-            "time": "2023-11-30T05:34:44+00:00"
+            "time": "2025-01-25T19:27:39+00:00"
         },
         {
             "name": "revolution/atproto-lexicon-contracts",
@@ -3906,12 +3906,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-bluesky.git",
-                "reference": "10e034a04255b205e8deb0ef7ec71826b74a92da"
+                "reference": "196440dea1df686fa4f4d3e4ad8f448346c5b084"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-bluesky/zipball/10e034a04255b205e8deb0ef7ec71826b74a92da",
-                "reference": "10e034a04255b205e8deb0ef7ec71826b74a92da",
+                "url": "https://api.github.com/repos/kawax/laravel-bluesky/zipball/196440dea1df686fa4f4d3e4ad8f448346c5b084",
+                "reference": "196440dea1df686fa4f4d3e4ad8f448346c5b084",
                 "shasum": ""
             },
             "require": {
@@ -3974,9 +3974,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kawax/laravel-bluesky/issues",
-                "source": "https://github.com/kawax/laravel-bluesky/tree/0.16.7"
+                "source": "https://github.com/kawax/laravel-bluesky/tree/main"
             },
-            "time": "2025-02-12T04:11:54+00:00"
+            "time": "2025-02-14T01:21:25+00:00"
         },
         {
             "name": "symfony/clock",
@@ -6479,16 +6479,16 @@
         },
         {
             "name": "workerman/coroutine",
-            "version": "v1.1.2",
+            "version": "v1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/workerman-php/coroutine.git",
-                "reference": "9daf6a420c55eff3e9f9f4217fd907f62a71ff3f"
+                "reference": "df8fc428967d512a74a8a7d80355c1d40228c9fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/workerman-php/coroutine/zipball/9daf6a420c55eff3e9f9f4217fd907f62a71ff3f",
-                "reference": "9daf6a420c55eff3e9f9f4217fd907f62a71ff3f",
+                "url": "https://api.github.com/repos/workerman-php/coroutine/zipball/df8fc428967d512a74a8a7d80355c1d40228c9fa",
+                "reference": "df8fc428967d512a74a8a7d80355c1d40228c9fa",
                 "shasum": ""
             },
             "require": {
@@ -6512,9 +6512,9 @@
             "description": "Workerman coroutine",
             "support": {
                 "issues": "https://github.com/workerman-php/coroutine/issues",
-                "source": "https://github.com/workerman-php/coroutine/tree/v1.1.2"
+                "source": "https://github.com/workerman-php/coroutine/tree/v1.1.3"
             },
-            "time": "2025-02-11T13:15:03+00:00"
+            "time": "2025-02-17T03:34:21+00:00"
         },
         {
             "name": "workerman/workerman",
@@ -7203,16 +7203,16 @@
         },
         {
             "name": "laravel/pint",
-            "version": "v1.20.0",
+            "version": "v1.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/pint.git",
-                "reference": "53072e8ea22213a7ed168a8a15b96fbb8b82d44b"
+                "reference": "531fa0871fbde719c51b12afa3a443b8f4e4b425"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/pint/zipball/53072e8ea22213a7ed168a8a15b96fbb8b82d44b",
-                "reference": "53072e8ea22213a7ed168a8a15b96fbb8b82d44b",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/531fa0871fbde719c51b12afa3a443b8f4e4b425",
+                "reference": "531fa0871fbde719c51b12afa3a443b8f4e4b425",
                 "shasum": ""
             },
             "require": {
@@ -7220,15 +7220,15 @@
                 "ext-mbstring": "*",
                 "ext-tokenizer": "*",
                 "ext-xml": "*",
-                "php": "^8.1.0"
+                "php": "^8.2.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.66.0",
-                "illuminate/view": "^10.48.25",
-                "larastan/larastan": "^2.9.12",
-                "laravel-zero/framework": "^10.48.25",
+                "friendsofphp/php-cs-fixer": "^3.68.5",
+                "illuminate/view": "^11.42.0",
+                "larastan/larastan": "^3.0.4",
+                "laravel-zero/framework": "^11.36.1",
                 "mockery/mockery": "^1.6.12",
-                "nunomaduro/termwind": "^1.17.0",
+                "nunomaduro/termwind": "^2.3",
                 "pestphp/pest": "^2.36.0"
             },
             "bin": [
@@ -7265,7 +7265,7 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
-            "time": "2025-01-14T16:20:53+00:00"
+            "time": "2025-02-18T03:18:57+00:00"
         },
         {
             "name": "laravel/sail",
@@ -8014,16 +8014,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "11.5.7",
+            "version": "11.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "e1cb706f019e2547039ca2c839898cd5f557ee5d"
+                "reference": "c9bd61aab12f0fc5e82ecfe621ff518a1d1f1049"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e1cb706f019e2547039ca2c839898cd5f557ee5d",
-                "reference": "e1cb706f019e2547039ca2c839898cd5f557ee5d",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c9bd61aab12f0fc5e82ecfe621ff518a1d1f1049",
+                "reference": "c9bd61aab12f0fc5e82ecfe621ff518a1d1f1049",
                 "shasum": ""
             },
             "require": {
@@ -8095,7 +8095,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.7"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.8"
             },
             "funding": [
                 {
@@ -8111,7 +8111,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-02-06T16:10:05+00:00"
+            "time": "2025-02-18T06:26:59+00:00"
         },
         {
             "name": "sebastian/cli-parser",
