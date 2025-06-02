@@ -20,9 +20,9 @@ use Revolution\Bluesky\Labeler\LabelDefinition;
 use Revolution\Bluesky\Labeler\Labeler;
 use Revolution\Bluesky\Labeler\LabelerException;
 use Revolution\Bluesky\Labeler\LabelLocale;
+use Revolution\Bluesky\Labeler\Response\SubscribeLabelResponse;
 use Revolution\Bluesky\Labeler\SavedLabel;
 use Revolution\Bluesky\Labeler\SignedLabel;
-use Revolution\Bluesky\Labeler\Response\SubscribeLabelResponse;
 use Revolution\Bluesky\Labeler\UnsignedLabel;
 use Revolution\Bluesky\Support\DidDocument;
 use Revolution\Bluesky\Types\RepoRef;
@@ -79,6 +79,7 @@ readonly class ArtisanLabeler extends AbstractLabeler
             // verify is optional.
             if (self::VERIFY && $this->verify($arr) === false) {
                 Labeler::log('subscribeLabels: verify failed', $arr);
+
                 continue;
             } else {
                 Labeler::log('subscribeLabels: verify success', $arr);
@@ -231,7 +232,7 @@ readonly class ArtisanLabeler extends AbstractLabeler
         Labeler::log('queryLabels', $request->all());
         Labeler::log('queryLabels header', $request->header());
 
-        //$uriPatterns = Arr::wrap($request->input('uriPatterns', '*'));
+        // $uriPatterns = Arr::wrap($request->input('uriPatterns', '*'));
         $limit = Number::clamp($request->input('limit', 1), min: 1, max: 50);
 
         $labels = Label::latest()->limit($limit)->get();

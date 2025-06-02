@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Artisan;
+use Revolution\Bluesky\Core\CBOR;
 use Revolution\Bluesky\Facades\Bluesky;
 use Revolution\Bluesky\Types\RepoRef;
 use Revolution\Bluesky\Types\StrongRef;
-use Revolution\Bluesky\Core\CBOR;
 use Workerman\Connection\AsyncTcpConnection;
 use Workerman\Worker;
 
@@ -89,7 +89,7 @@ Artisan::command('bsky:label-record-delete {at-uri}', function () {
 });
 
 Artisan::command('bsky:ws {cmd}', function () {
-    $worker = new Worker();
+    $worker = new Worker;
 
     $worker->onWorkerStart = function ($worker) {
         $con = new AsyncTcpConnection('ws://laralabeler.invokable.net/xrpc/com.atproto.label.subscribeLabels:443?cursor=0');
