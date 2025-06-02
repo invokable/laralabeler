@@ -20,17 +20,8 @@ jobs:
           php-version: 8.4
           extensions: mbstring
           coverage: xdebug
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
       - name: Install Composer dependencies
         run: composer install -q
-      - name: Install npm dependencies
-        run: npm install
-      - name: Build frontend assets
-        run: npm run build
       - name: Setup Laravel environment
         run: cp .env.example .env && php artisan key:generate
       - name: Test
