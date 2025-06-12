@@ -1,6 +1,9 @@
 LaraLabeler
 ====
 
+- https://bsky.app/profile/laralabeler.bsky.social
+- https://github.com/invokable/laravel-bluesky/blob/main/docs/labeler.md
+
 LaraLabeler is a Laravel-based Bluesky labeling service that automatically applies visual "artisan" badges to users who follow the @laralabeler.bsky.social account. The service operates as a decentralized content labeler on the Bluesky social network, using the AT Protocol to manage user labels.
 
 **Primary Users**: Bluesky users who want to display an "artisan" badge on their profiles and posts.
@@ -24,8 +27,6 @@ LaraLabeler is a Laravel-based Bluesky labeling service that automatically appli
 - `resources/views/`: Blade templates
 - `.github/workflows/`: CI/CD
 
-- https://bsky.app/profile/laralabeler.bsky.social
-- https://github.com/invokable/laravel-bluesky/blob/main/docs/labeler.md
 
 ## LICENCE
 MIT
