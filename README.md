@@ -27,6 +27,5 @@ LaraLabeler is a Laravel-based Bluesky labeling service that automatically appli
 - `resources/views/`: Blade templates
 - `.github/workflows/`: CI/CD
 
-
 ## LICENCE
 MIT
