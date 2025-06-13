@@ -29,6 +29,7 @@ LaraLabeler is a **Laravel-based Bluesky labeling service** that automatically a
 **3. Database Layer** (`app/Models/`, `database/migrations/`)
 - `Label.php` - Eloquent model for storing signed labels
 - Migration creates `labels` table with signature verification fields
+- Laravel queue jobs and batches support (`jobs` and `job_batches` tables)
 
 **4. Command Interface** (`app/Console/Commands/`, `routes/console.php`)
 - `LabelFollowerCommand.php` - Batch processes existing followers for labeling
@@ -37,6 +38,7 @@ LaraLabeler is a **Laravel-based Bluesky labeling service** that automatically a
 **5. Web Interface** (`routes/web.php`, `resources/views/`)
 - Simple welcome page explaining the labeling service
 - Displays markdown content from configuration
+- Styled with Tailwind CSS and PostCSS for responsive design
 
 ### Directory Structure
 
@@ -59,19 +61,21 @@ routes/
 └── web.php                  # Web routes (welcome page)
 
 resources/views/             # Blade templates
+tests/                       # PHPUnit test suites (Unit, Feature)
 .github/workflows/           # CI/CD automation (tests, linting, updates)
 ```
 
 ### Key Files and Classes
 
 **Primary Components**:
-- `ArtisanLabeler::class` - Core labeler implementation with label management methods
+- `ArtisanLabeler::class` - Core labeler implementation extending AbstractLabeler with label management methods
 - `FollowListener::handle(JetstreamCommitMessage $event)` - Event-driven label application
 - `LabelFollowerCommand::handle()` - Batch follower processing
 - `Label::class` - Database model with custom casts for AT Protocol data
 
 **Configuration**:
 - `config/labeler.php` - Service description and user instructions
+- `config/bluesky.php` - Bluesky API and labeler configuration (bluesky.labeler.* keys)
 - `composer.json` - Defines Bluesky integration dependencies
 - `bootstrap/app.php` - Schedules hourly follower labeling
 
@@ -79,15 +83,23 @@ resources/views/             # Blade templates
 - `Revolution\Bluesky` package - AT Protocol client for Bluesky API
 - `Revolution\AtProto` - Lexicon definitions and data types
 
+## License
+
+LaraLabeler is released under the **MIT License**. See the `LICENSE` file for full license text and usage terms.
+
 ## Glossary of Codebase-Specific Terms
 
-**ArtisanLabeler** - `app/Labeler/ArtisanLabeler.php` - Core labeler class extending AbstractLabeler; manages 'artisan' label lifecycle
+**ArtisanLabeler** - `app/Labeler/ArtisanLabeler.php` - Core labeler class extending AbstractLabeler; manages 'artisan' label lifecycle through LabelDefinition
 
 **FollowListener** - `app/Listeners/FollowListener.php` - Event listener responding to JetstreamCommitMessage for automatic labeling
 
 **LabelFollowerCommand** - `app/Console/Commands/LabelFollowerCommand.php` - Artisan command: `bsky:label-follower` for batch processing
 
 **Label** - `app/Models/Label.php` - Eloquent model storing signed labels with AtBytesObject signature casting
+
+**LabelDefinition** - AT Protocol class defining label metadata; used in ArtisanLabeler to specify 'artisan' label properties
+
+**LabelLocale** - AT Protocol class defining localized label text; contains language-specific name and description
 
 **UnsignedLabel** - Label object before cryptographic signing; created by emitEvent() method
 
@@ -120,6 +132,10 @@ resources/views/             # Blade templates
 **labeler_session** - Cached authentication session for Bluesky API; 12-hour TTL
 
 **bluesky.labeler.did** - Configuration key storing labeler's Decentralized Identifier
+
+**bluesky.labeler.identifier** - Configuration key for labeler's Bluesky handle/identifier for authentication
+
+**bluesky.labeler.password** - Configuration key for labeler's app password for Bluesky API authentication
 
 **Graph::Follow** - AT Protocol lexicon enum for follow collection type
 
