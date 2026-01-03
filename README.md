@@ -1,6 +1,11 @@
 LaraLabeler
 ====
 
+> [!DANGER]
+> The working Live server has been discontinued. This label is no longer functional.
+> This code should still be useful as a reference.
+
+
 Sample of Bluesky Labeler.
 
 - https://bsky.app/profile/laralabeler.bsky.social
