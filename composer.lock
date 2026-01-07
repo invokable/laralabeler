@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7a19f235d885a7eb0888e601137c4bd8",
+    "content-hash": "e9782be6634c9b77ac947bf0db12f43d",
     "packages": [
         {
             "name": "brick/math",
@@ -3859,16 +3859,16 @@
         },
         {
             "name": "revolution/laravel-bluesky",
-            "version": "dev-main",
+            "version": "dev-labeler",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-bluesky.git",
-                "reference": "0611fc6790a52bcf80901865a3083690b4b00358"
+                "reference": "0bb89f88f023200f1e9f0f9e951f0d4fdf90304d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-bluesky/zipball/0611fc6790a52bcf80901865a3083690b4b00358",
-                "reference": "0611fc6790a52bcf80901865a3083690b4b00358",
+                "url": "https://api.github.com/repos/invokable/laravel-bluesky/zipball/0bb89f88f023200f1e9f0f9e951f0d4fdf90304d",
+                "reference": "0bb89f88f023200f1e9f0f9e951f0d4fdf90304d",
                 "shasum": ""
             },
             "require": {
@@ -3883,6 +3883,7 @@
             },
             "require-dev": {
                 "laravel/pint": "^1.22",
+                "laravel/reverb": "^1.7",
                 "orchestra/testbench": "^9.0||^10.0",
                 "revolt/event-loop": "^1.0",
                 "revolution/laravel-boost-copilot-cli": "^1.0",
@@ -3894,7 +3895,6 @@
                 "revolt/event-loop": "Required to use WebSocket.",
                 "workerman/workerman": "Required to use WebSocket."
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -3929,7 +3929,7 @@
                 "socialite"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-bluesky/tree/main"
+                "source": "https://github.com/invokable/laravel-bluesky/tree/labeler"
             },
             "funding": [
                 {
@@ -3937,7 +3937,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-07T06:22:30+00:00"
+            "time": "2026-01-07T09:47:41+00:00"
         },
         {
             "name": "symfony/clock",
