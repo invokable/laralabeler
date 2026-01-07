@@ -14,7 +14,7 @@
         "laravel/reverb": "^1.7",
         "laravel/tinker": "^2.9",
         "revolt/event-loop": "^1.0",
-        "revolution/laravel-bluesky": "dev-labeler",
+        "revolution/laravel-bluesky": "^1.0",
         "workerman/workerman": "^5.0.0"
     },
     "require-dev": {

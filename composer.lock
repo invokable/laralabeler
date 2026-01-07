@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "45c1877b08e316bfed97a47979d33a4a",
+    "content-hash": "dc1822f815bb942e9d2dca5bfa27273c",
     "packages": [
         {
             "name": "brick/math",
@@ -4864,16 +4864,16 @@
         },
         {
             "name": "revolution/laravel-bluesky",
-            "version": "dev-labeler",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-bluesky.git",
-                "reference": "5ebd7268b1043b8a0602ad4c2e0678a809ff461a"
+                "reference": "838e6960fc57ed5e21436a86bd6eb5fa305c4f72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-bluesky/zipball/5ebd7268b1043b8a0602ad4c2e0678a809ff461a",
-                "reference": "5ebd7268b1043b8a0602ad4c2e0678a809ff461a",
+                "url": "https://api.github.com/repos/invokable/laravel-bluesky/zipball/838e6960fc57ed5e21436a86bd6eb5fa305c4f72",
+                "reference": "838e6960fc57ed5e21436a86bd6eb5fa305c4f72",
                 "shasum": ""
             },
             "require": {
@@ -4888,7 +4888,6 @@
             },
             "require-dev": {
                 "laravel/pint": "^1.22",
-                "laravel/reverb": "^1.7",
                 "orchestra/testbench": "^9.0||^10.0",
                 "revolt/event-loop": "^1.0",
                 "revolution/laravel-boost-copilot-cli": "^1.0",
@@ -4934,7 +4933,7 @@
                 "socialite"
             ],
             "support": {
-                "source": "https://github.com/invokable/laravel-bluesky/tree/labeler"
+                "source": "https://github.com/invokable/laravel-bluesky/tree/1.1.6"
             },
             "funding": [
                 {
@@ -4942,7 +4941,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-07T09:54:37+00:00"
+            "time": "2026-01-05T03:34:38+00:00"
         },
         {
             "name": "symfony/clock",
@@ -10471,9 +10470,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "revolution/laravel-bluesky": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
