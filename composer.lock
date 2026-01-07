@@ -3863,12 +3863,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/invokable/laravel-bluesky.git",
-                "reference": "5de794a86ea4aa0147cd7c7cb63e9bbe35ab3a55"
+                "reference": "0611fc6790a52bcf80901865a3083690b4b00358"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/invokable/laravel-bluesky/zipball/5de794a86ea4aa0147cd7c7cb63e9bbe35ab3a55",
-                "reference": "5de794a86ea4aa0147cd7c7cb63e9bbe35ab3a55",
+                "url": "https://api.github.com/repos/invokable/laravel-bluesky/zipball/0611fc6790a52bcf80901865a3083690b4b00358",
+                "reference": "0611fc6790a52bcf80901865a3083690b4b00358",
                 "shasum": ""
             },
             "require": {
@@ -3937,7 +3937,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-07T05:51:59+00:00"
+            "time": "2026-01-07T06:22:30+00:00"
         },
         {
             "name": "symfony/clock",
